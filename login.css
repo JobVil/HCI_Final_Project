@@ -14,7 +14,7 @@ body{
     background-size: cover;
     height: 100%;
     width: 100%;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     background-color: #cccccc;
 }
 .test{
@@ -25,6 +25,7 @@ body{
     height: 100%;
     width: 100%;
     position: absolute;
+    overflow: hidden;
 }
 
 .left-panel{
@@ -43,13 +44,13 @@ body{
 
 .right-panel{
     height: 100%;
-    width: 565px;
+    width: 500px;
     position: relative;
-    float: left;
+    float: right;
 }
 
 .top-panel{
-    height: 100px;
+    height: 80px;
 }
 
 .main-panel{
@@ -63,7 +64,7 @@ body{
 .split-screen{
     height: 100%;
     width: 100%;
-    background-color: #ffffffe6;
+    background-color: #b2b9c4e6;
 }
 
 .logo{
@@ -77,7 +78,7 @@ body{
     align-content: center;
     text-align: center;
     width: 70%;
-    height: 100px;
+    height: 80px;
     left: 106px;
     top: 50px;
     position: relative;
@@ -100,7 +101,7 @@ body{
     width: 100%;
     height: 30px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .password-label{
@@ -109,7 +110,7 @@ body{
     width: 100%;
     height: 30px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .rememberme-label{
@@ -147,15 +148,13 @@ body{
 input{
     height: 100%;
     width: 100%;
-    border: none;
-    background-color: #eae8e8  !important;
-    border-bottom: 2px solid #848484;
-    border-radius: 5px;
-    font-size: 20px;
+    font-size: 24px;
     font-family: roboto;
-    padding: 2px;
-    padding-inline-start: 10px;
+    padding-inline-start: 5px;
     font-style: roboto;
+    border-width: 0px 0px 2px 0px;
+    border-color: #3e5882;
+    background-color: transparent; 
 }
 
 .submit{
@@ -163,10 +162,12 @@ input{
 }
 
 button{
+    align-content: center;
     width: 90%;
     height: 40px;
-    background-color: #efabab;
+    background-color: #3e5882;
     border: none;
+    border-radius: 3px;
     font-size: 20px;
     font-style: roboto;
     font-family: roboto;
