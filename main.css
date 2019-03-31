@@ -268,7 +268,12 @@ body{
 .toggle-tree:hover{
     background-color: #a29d9d;
 }
+.tags{
+	position: relative;
+	width: 80%;
+	padding: 10px;
 
+}
 /* Search Result Component*/
 .content-results{
     height: 100%;
