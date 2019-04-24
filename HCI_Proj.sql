@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS Doors (
     `Width` NUMERIC(4, 1),
     `Thickness` NUMERIC(2, 1),
     `InteriorExteriorID` INT,
-    `FilterTag` INT
+    `FilterTag` VARCHAR(24) CHARACTER SET utf8
 );
 INSERT INTO Doors VALUES
     ('10LPIN688110','1''10x6''8x1 3/8 10 LITE RADIATA SGM',1.0,19.0,8.0,68.0,110.0,8.0,NULL,NULL),
@@ -742,7 +742,7 @@ INSERT INTO DoorLights VALUES
 CREATE TABLE IF NOT EXISTS DoorTypes (
     `TypeID` NUMERIC(3, 1),
     `TypeName` VARCHAR(3) CHARACTER SET utf8,
-    `FilterTag` VARCHAR(4) CHARACTER SET utf8
+    `FilterTag` VARCHAR(24) CHARACTER SET utf8
 );
 INSERT INTO DoorTypes VALUES
     (1.0,'BFT',NULL),
