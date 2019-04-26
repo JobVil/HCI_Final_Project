@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body onload="changeNavigation()">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="top-row">
+            <div class="navbar-header">
+                <div class="logo-container"><img src="~/Images/Junico_icon.png" /></div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="doors" class="menu">@Html.ActionLink("Doors", "Doors", "Main")</li>
+                    <li id="inserts" class="menu">@Html.ActionLink("Inserts", "Inserts", "Main")</li>
+                    <li id="frames" class="menu">@Html.ActionLink("Frames", "Frames", "Main")</li>
+                    <li id="hardware" class="menu">@Html.ActionLink("Hardware", "Hardware", "Main")</li>
+                </ul>
+            </div>
+            <div class='menu-icons'>
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

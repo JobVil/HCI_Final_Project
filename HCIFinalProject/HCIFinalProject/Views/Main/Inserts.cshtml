@@ -1,0 +1,166 @@
+﻿@model IEnumerable<HCIFinalProject.Models.Main>
+@{
+    ViewBag.Title = "About";
+    int id = 0;
+}
+
+<div id='main'>
+    <div id='menu-tree' class='menu-tree'>
+        <div class="top-padding"></div>
+        <div class="tag-container">
+            <div class='search-bar'>
+                <form id="tag-form" class="navbar-form navbar-left" onsubmit="return false">
+                    <div class="form-group search-bar">
+                        <input id='tag-input' type="text" class="form-control search" placeholder="Tag Search">
+                    </div>
+                    <button onclick='renderTags()' type="submit" class="btn btn-default search hidden"></button>
+                </form>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="text-center">
+                    <div class="form-group">
+                        <label>Filter Tags</label>
+                        <input id="filter-tags" type="text" value="" data-role="tagsinput" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="price-container">
+            <div class="side-label"> Price: </div>
+            <select class="price-select">
+                <option value="40-80">40$ - 80$</option>
+                <option value="80-120">80$ - 120$</option>
+                <option value="120-160">120$ - 160$</option>
+                <option value="160-200">160$ - 200$</option>
+            </select>
+        </div>
+        <div class="dimension-container">
+            <div class="side-label"> Width: </div>
+            <select class="dimension">
+                <option value="1">1'</option>
+                <option value="2">2'</option>
+                <option value="3">3'</option>
+            </select>
+            <select class="dimension">
+                <option value="0">0"</option>
+                <option value="2">2"</option>
+                <option value="3">3"</option>
+                <option value="4">4"</option>
+                <option value="6">6</option>
+                <option value="8">8"</option>
+                <option value="10">10"</option>
+            </select>
+            <div class="to"> To </div>
+            <select class="dimension">
+                <option value="1">1'</option>
+                <option value="2">2'</option>
+                <option value="3">3'</option>
+            </select>
+            <select class="dimension">
+                <option value="0">0"</option>
+                <option value="2">2"</option>
+                <option value="3">3"</option>
+                <option value="4">4"</option>
+                <option value="6">6</option>
+                <option value="8">8"</option>
+                <option value="10">10"</option>
+            </select>
+        </div>
+        <div class="dimension-container">
+            <div class="side-label"> Height: </div>
+            <select class="dimension">
+                <option value="68">6'8"</option>
+                <option value="70">7'0"</option>
+                <option value="80">8'0"</option>
+            </select>
+            <div class="to"> To </div>
+            <select class="dimension">
+                <option value="68">6'8"</option>
+                <option value="70">7'0"</option>
+                <option value="80">8'0"</option>
+            </select>
+        </div>
+        <div class="dimension-container">
+            <div class="side-label"> Depth: </div>
+            <select class="dimension1">
+                <option value="8">1.375"</option>
+                <option value="4">1.75"</option>
+            </select>
+            <div class="to"> To </div>
+            <select class="dimension1">
+                <option value="8">1.375"</option>
+                <option value="4">1.75"</option>
+            </select>
+        </div>
+        <div class="lites-row">
+            <div class="lites-label l1"> Number of Lites: </div>
+            <select class="lites-select">
+                <option value="1L">1</option>
+                <option value="5L">5</option>
+                <option value="6L">6</option>
+                <option value="10L">10</option>
+                <option value="12L">12</option>
+                <option value="12L">15</option>
+                <option value="18L">18</option>
+            </select>
+        </div>
+        <div class="lites-row">
+            <div class="lites-label"> Number of Panels: </div>
+            <select class="lites-select">
+                <option value="1P">1</option>
+                <option value="2P">2</option>
+                <option value="3P">3</option>
+                <option value="5P">5</option>
+                <option value="6P">6</option>
+                <option value="9P">9</option>
+            </select>
+        </div>
+        <button class="app-btn" onclick="applyFilter()">Apply</button>
+    </div>
+
+    <div id="tree-toggle" class='toggle-tree' onclick="toggleMenuTree()">
+        <span class='glyphicon glyphicon-option-vertical three-dots'></span>
+    </div>
+
+    <div id='search-results' class='content-results'>
+        <div id='top-row-results' class='top-row-results'>
+            <button id="btn-view" class="btn gridView" onclick="gridView()">
+                <i class="glyphicon glyphicon-th"></i>
+            </button>
+            <button id="btn-view1" class="btn listView activeBtn" onclick="listView()">
+                <i class="glyphicon glyphicon-th-list"></i>
+            </button>
+        </div>
+        @foreach (var dt in Model)
+        {
+            <div class="searchItemCol">
+                <img class="doorImage" src=@Url.Content("~/Images/inserts"+id.ToString()+".jpg")>
+                <div class="miscDescription">
+                    <div class="itemID">
+                        @dt.ItemID
+                    </div>
+                    <div class="itemHeight">
+                        @dt.ItemHeight
+                    </div>
+                    <div class="itemMaterial">
+                        @dt.ItemMaterial
+                    </div>
+                    <div class="itemWidth">
+                        @dt.ItemWidth
+                    </div>
+                    <div class="itemPrice">
+                        @dt.ItemPrice
+                    </div>
+                    <div class="itemDepth">
+                        @dt.ItemDepth
+                    </div>
+                    <div class="itemDescription">
+                        @dt.ItemDescription
+                    </div>
+                </div>
+                @{id++;
+                    id %= 3;}
+            </div>
+        }
+    </div>
+</div>
