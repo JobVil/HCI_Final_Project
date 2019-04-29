@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{E482B47C-B5FA-4BA0-B759-FD81538CD492}|">
+  <MonoDevelop.Ide.ItemProperties.HCIFinalProject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HCIFinalProject/Models/MainDB.cs">
+    <Files>
+      <File FileName="HCIFinalProject/Models/Main.cs" Line="9" Column="2" />
+      <File FileName="HCIFinalProject/Models/MainDB.cs" Line="110" Column="23" />
+      <File FileName="HCIFinalProject/Models/Door.cs" Line="14" Column="9" />
+      <File FileName="HCIFinalProject/Controllers/MainController.cs" Line="20" Column="32" />
+      <File FileName="HCIFinalProject/Views/Main/Doors.cshtml" Line="1" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Seagate Backup Plus Drive/GitHub/HCI_Final_Project/HCIFinalProject/HCIFinalProject/Models/MainDB.cs" relfile="HCIFinalProject/Models/MainDB.cs" line="114" column="34" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HCIFinalProject.Models.Main>
+﻿@model IEnumerable<HCIFinalProject.Models.Door>
 @{
     ViewBag.Title = "About";
     int id = 0;
@@ -131,7 +131,7 @@
                 <i class="glyphicon glyphicon-th-list"></i>
             </button>
         </div>
-        @foreach (var dt in Model)
+        @foreach (Door in MainDB.doors)
         {
             <div class="searchItemCol">
                 <img class="doorImage" src=@Url.Content("~/Images/door"+id.ToString()+".jpg")>

@@ -21,7 +21,7 @@ namespace HCIFinalProject.Controllers
             else
                 db = new MainDB(tags, priceRange, dim1, dim2, num);
 
-            List<Main> main = db.GetMainData();
+            List<Door> main = db.GetMainData();
             return View(main);
         }
 
@@ -36,7 +36,7 @@ namespace HCIFinalProject.Controllers
             else
                 db = new MainDB(tags, priceRange, dim1, dim2, num);
 
-            List<Main> main = db.GetMainData();
+            List<Door> main = db.GetMainData();
             return View(main);
         }
 
@@ -51,7 +51,7 @@ namespace HCIFinalProject.Controllers
             else
                 db = new MainDB(tags, priceRange, dim1, dim2, num);
 
-            List<Main> main = db.GetMainData();
+            List<Door> main = db.GetMainData();
             return View(main);
         }
 
@@ -66,7 +66,7 @@ namespace HCIFinalProject.Controllers
             else
                 db = new MainDB(tags, priceRange, dim1, dim2, num);
 
-            List<Main> main = db.GetMainData();
+            List<Door> main = db.GetMainData();
             return View(main);
         }
     }
